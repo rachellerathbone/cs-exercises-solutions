@@ -17,11 +17,9 @@ describe('Hash Table', () => {
     it('should greet the user in English for invalid inputs', () => {
       greet('bob').should.equal('Welcome a Miami.');
     });
+
+    it('should greet the user with the correct lang even if it the input is capitolized', () => {
+      greet('Swedish').should.equal('Valkommen a Miami.');
+    });
   });
 });
-
-
-
-//Test.assertEquals(greet('english'), 'Welcome', "Your function should have returned 'Welcome'. Try again.");
-//Test.assertEquals(greet('dutch'), 'Welkom', "Your function should have returned 'Welkom'. Try again.");
-//Test.assertEquals(greet('IP_ADDRESS_INVALID'), 'Welcome', "Your function should have returned 'Welcome'. Try again.");
