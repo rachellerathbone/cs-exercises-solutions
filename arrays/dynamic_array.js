@@ -8,6 +8,22 @@ class DynamicArray {
     this.array = new FixedArray(length * 2);
   }
 
+  get(index) {
+    if (index < 0 || index >= this.length) {
+      throw new Error('Index out of bounds');
+    }
+
+    return this.array.get(index);
+  }
+
+  set(index, item) {
+    if (index < 0 || index >= this.length) {
+      throw new Error('Index out of bounds');
+    }
+
+    this.array.set(index, item);
+  }
+
   // Implement a method push that takes in one argument, item (a number), it
   // adds the item to the end of the array, copying it to a new FixedArray if
   // necessary. There is no need to return anything.
@@ -56,3 +72,5 @@ class DynamicArray {
     this.length -= 1;
   }
 }
+
+module.exports = DynamicArray;
