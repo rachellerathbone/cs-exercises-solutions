@@ -60,16 +60,11 @@ class DynamicArray {
       throw new Error('Index out of bounds');
     }
 
-    if (index === this.length - 1) {
-      return this.pop();
-    }
-
     for (let i = index + 1; i < this.length; i++) {
       this.array.set(i - 1, this.array.get(i));
     }
 
-    this.array.set(this.length - 1, undefined);
-    this.length -= 1;
+    this.pop();
   }
 }
 
