@@ -183,17 +183,17 @@ describe('LinkedList', () => {
         expect(level3.map(buildList(3), double)).to.be.eql(buildList(3, double));
       });
     });
-  });
 
-  describe("#Filter", () => {
-    it('Filters over an empty linked lists (only evens)', () => {
-      expect(level3.filter(null, (num) => num * 2)).to.be.equal(null);
-    });
+    describe("#Filter", () => {
+      it('Filters over an empty linked lists (only evens)', () => {
+        expect(level3.filter(null, (num) => num * 2)).to.be.equal(null);
+      });
 
-    it('Filters over a non-empty linked lists (only evens)', () => {
-      expect(level3.filter(buildList(3), (num) => num % 2 === 0)).to.be.eql({
-        value: 2,
-        next: null
+      it('Filters over a non-empty linked lists (only evens)', () => {
+        expect(level3.filter(buildList(3), (num) => num % 2 === 0)).to.be.eql({
+          value: 2,
+          next: null
+        });
       });
     });
   });
