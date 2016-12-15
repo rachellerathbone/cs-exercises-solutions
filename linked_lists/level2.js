@@ -76,3 +76,9 @@ function reverse(list) {
   //
   // tailFcn(list, null);
 }
+
+module.exports = {
+  insertInBack,
+  removeNodeAtIndex,
+  reverse
+};

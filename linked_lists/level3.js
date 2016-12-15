@@ -165,79 +165,8 @@ function filter(list, fcn) {
   // }
 }
 
-// Write a function named merge that takes in the following as arguments:
-//   list1 - a linked list in sorted order
-//   list2 - a linked list in sorted order
-// The function returns a NEW linked list that is in sorted order.
-// Example:
-//    merge(1 -> 3 -> 5 -> ., 2 -> 4 -> 6 -> .) produces
-//       1 -> 2 -> 3 -> 4 -> 5 -> 6 -> .
-function merge(list1, list2) {
-  let newList = {
-    value: null,
-    next: null
-  };
-  let listTail = newList;
-
-  while(list1 !== null && list2 !== null) {
-    if (list1.value < list2.value) {
-      listTail.next = {
-        value: list1.value,
-        next: null
-      };
-      list1 = list1.next;
-      listTail = listTail.next;
-    } else {
-      listTail.next = {
-        value: list2.value,
-        next: null
-      };
-      list2 = list2.next;
-      listTail = listTail.next;
-    }
-  }
-
-  while(list1 !== null) {
-    listTail.next = {
-      value: list1.value,
-      next: null
-    };
-    list1 = list1.next;
-    listTail = listTail.next;
-  }
-
-  while(list2 !== null) {
-    listTail.next = {
-      value: list2.value,
-      next: null
-    };
-    list2 = list2.next;
-    listTail = listTail.next;
-  }
-
-  return newList.next;
-
-  // if (list1 === null && list2 === null) {
-  //   return null;
-  // } else if (list1 === null) {
-  //   return {
-  //     value: list2.value,
-  //     next: merge(list1, list2.next);
-  //   };
-  // } else if (list2 === null) {
-  //   return {
-  //     value: list1.value,
-  //     next: merge(list1.next, list2);
-  //   };
-  // } else if (list1.value < list2.value) {
-  //   return {
-  //     value: list1.value,
-  //     next: merge(list1.next, list2);
-  //   };
-  // } else {
-  //   return {
-  //     value: list2.value,
-  //     next: merge(list1, list2.next);
-  //   };
-  // }
+module.exports = {
+  merge,
+  map,
+  filter
 }

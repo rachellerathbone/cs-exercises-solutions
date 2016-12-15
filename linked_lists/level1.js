@@ -53,6 +53,15 @@ function sum(list) {
   // }
 }
 
+// Write a function named getValueAtIndex that takes in the following:
+//   list (a linked list)
+//   index (a number)
+// The function returns the value of the item at the index. If an invalid index
+// is used, it will throw an error.
+// Example:
+//  getValueAtIndex(1 -> 2 -> 3 -> ., 2) produces 3
+//  getValueAtIndex(1 -> 2 -> 3 -> ., 0) produces 1
+//  getValueAtIndex(1 -> 2 -> 3 -> ., 4) throws an error
 function getValueAtIndex(list, index) {
   if (index < 0) {
     throw new Error('Index out of bounds');
@@ -94,3 +103,11 @@ function toArray(list) {
   //   return [list.value].concat(toArray(list.next));
   // }
 }
+
+module.exports = {
+  count,
+  insertInFront,
+  sum,
+  getValueAtIndex,
+  toArray
+};
