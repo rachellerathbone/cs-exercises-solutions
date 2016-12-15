@@ -20,6 +20,12 @@ function insertInBack(value, list) {
   return head;
 }
 
+// Write a function named removeNodeAtIndex that takes in the following:
+//   list (a linked list)
+//   index (a number)
+// The function returns the linked list with the node at that index removed.
+// Example:
+//  removeNodeAtIndex(1 -> 2 -> 3 -> ., 1) produces 1 -> 3 -> .
 function removeNodeAtIndex(list, index) {
   let head = list;      // Point to head
   let prev = list;
