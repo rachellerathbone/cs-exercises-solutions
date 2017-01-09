@@ -136,7 +136,7 @@ function finalText(commands) {
 
   let str = '';
   while(text.length() > 0) {
-    str += text.pop();
+    str = text.pop() + str;
   }
 
   return str;
@@ -206,8 +206,15 @@ function finalText2(commands) {
 
   let str = '';
   while(text.length() > 0) {
-    str += text.pop();
+    str = text.pop() + str;
   }
 
   return str;
 }
+
+module.exports = {
+  checkParens,
+  validate,
+  finalText,
+  finalText2
+};

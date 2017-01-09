@@ -19,3 +19,5 @@ class Stack {
     return this._arr.length;
   }
 }
+
+module.exports = Stack;
