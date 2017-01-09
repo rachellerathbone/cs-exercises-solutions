@@ -11,8 +11,8 @@ class Stack {
     return this._arr[this._arr.length - 1];
   }
 
-  pop(item) {
-    return this._arr.pop(item);
+  pop() {
+    return this._arr.pop();
   }
 
   length() {
